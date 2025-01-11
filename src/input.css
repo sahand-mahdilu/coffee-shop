@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "dana";
+    src: local("Dana"),
+      url("../public/fonts/Dana/woff2/DanaFaNum-Regular.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "dana medium";
+    src: local("Dana Medium"),
+      url("../public/fonts/Dana/woff2/DanaFaNum-Medium.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Dana DemiBold";
+    src: local("dana"),
+      url("../public/fonts/Dana/woff2/DanaFaNum-DemiBold.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "morabba light";
+    src: local("Morabba Light"),
+      url("../public/fonts/Morabba/woff2/Morabba-Light.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "morabba medium";
+    src: local("Morabba Mdium"),
+      url("../public/fonts/Morabba/woff2/Morabba-Medium.woff2") format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Morabba Bold";
+    src: local("morabba bold"),
+      url("../public/fonts/Morabba/woff2/Morabba-Bold.woff2") format("woff2");
+    font-display: swap;
+  }
+}
+
+@layer components {
+  .subMenu {
+    @apply hidden flex-col dark:text-white pr-[46px] space-y-[12px];
+  }
+  .submenu__open {
+    @apply flex;
+  }
+  .circle__container{
+
+    @apply  absolute bottom-0 right-0 left-0 mx-auto 
+  }
+
+  .circle {
+    @apply hidden sm:flex border rounded-full  justify-center items-center
+  }
+  .circle__lg {
+    @apply size-[203px]
+    border-white/20
+    
+  }
+  .circle__md {
+    @apply size-[150px]
+    border-white/50
+  }
+  .circle__sm {
+    @apply size-[95px]
+    border-white/80
+  }
+
+  html.dark .products{
+    background: url("../public/images/CoffeeShop-Files/body-bg.png");
+    
+  }
+  .products{
+    
+      background: linear-gradient(rgba(243,244,246,0.65),rgba(243,244,246,0.65)), url("../public/images/CoffeeShop-Files/body-bg.png");
+   
+  }
+
+
+
+
+  .product__title{
+    @apply font-MorabbaMedium text-2xl sm:text-5xl text-zinc-700 dark:text-white 
+
+  }
+  .product__subtitle{
+    @apply font-MorabbaLight text-lg sm:text-3xl text-zinc-700 dark:text-white pt-[6px]
+
+  }
+  .product_link{
+    @apply flex py-[6px] px-[10px] hover:bg-orange-200/20 items-start sm:gap-x-1 text-orange-300 tracking-tracking-tight-s
+
+  }
+
+
+  .banner1 {
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.6) 33.85%, rgba(0, 0, 0, 0.1) 100%), url(../public/images/CoffeeShop-Files/categories/category-right.jpg);
+    object-fit: cover;
+    @apply rounded-2xl h-[248px] px-7 flex items-center
+  }
+  .banner2 {
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.6) 33.85%, rgba(0, 0, 0, 0.1) 100%), url(../public/images/CoffeeShop-Files/categories/category-left.jpg);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    @apply rounded-2xl
+    h-[248px] px-7 flex items-center
+
+}
+
+
+.banner__title{
+ @apply font-DanaDemibold text-2xl md:text-4xl text-white
+
+}
+.banner__subtitle{
+  @apply font-DanaMedium text-[16px] md:text-xl text-white pt-7
+
+}
+
+
+.servises{
+  @apply relative
+
+
+}
+.servises::after,
+.servises::before{
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  background-color:#D1D5DB;
+
+}
+
+.servises::after{
+  width: 1px;
+  height: 100%;
+
+}
+.servises::before{
+  width: calc(100% - 2rem);
+  height: 1px;
+
+}
+
+@media screen and (min-width:420px) {
+
+  .servises::after,
+.servises::before{
+  content: none;
+}
+
+}
+
+
+.footer__btn{
+  direction: ltr;
+}
+.footer__text{
+  direction: ltr;
+}
+
+
+}
